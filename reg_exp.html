@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+    <style>
+        table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+        }
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Reguler Expression</h2>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp Object - A RegExp Object is a pattern with Properties and Methods</h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+        <td>1. ignoreCase</td>
+        <td>The ignoreCase property specifies whether or not the "i" modifier is set.
+            This property returns true if the "i" modifier is set, otherwise it returns false. 
+        </td>
+    </tr>
+    <tr>
+        <td>2. multiline</td>
+        <td>The multiline property specifies whether or not the m modifier is set.
+            This property returns true if the "m" modifier is set, otherwise it returns false.</td>
+    </tr>
+    <tr>
+        <td>3. source</td>
+        <td>The source property returns the text of the RegExp pattern.</td>
+    </tr>
+    <tr>
+        <td>4. test()</td>
+        <td>The test() method tests for a match in a string.
+            If it finds a match, it returns true, otherwise it returns false.</td>
+    </tr>
+    <tr>
+        <td>5. exec()</td>
+        <td>The exec() method tests for a match in a string.
+            If it finds a match, it returns a result array, otherwise it returns null.</td>
+    </tr>
+    </table>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp Modifiers - A RegExp Modifiers can be used to perform case-insensitive more global searches</h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+        <td>1. g modifier</td>
+        <td>The "g" modifier specifies a global match.
+            A global match finds all matches (compared to only the first).
+        </td>
+    </tr>
+    <tr>
+        <td>2. i modifier</td>
+        <td>The "i" modifier specifies a case-insenitive match.</td>
+    </tr>
+    <tr>
+        <td>3. m modifier</td>
+        <td>The "m" modifier specifies a multiline match.
+            It only affects the behavior of start ^ and end $.
+            ^ specifies a match at the start of a string.
+            $ specifies a match at the end of a string.
+            With the "m" set, ^ and $ also match at the beginning and end of each line.</td>
+    </tr>
+    </table>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp Group/Brackets - Brackets can define single characters, groups, or character spans</h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+        <td>1. [A-z]</td>
+        <td>Brackets [abc] specifies matches for the characters inside the brackets. Any character from uppercase A to lowercase z </td>
+    </tr>
+    <tr>
+        <td>2. [^abc]</td>
+        <td>Brackets [^abc] specifies matches for any character NOT between the brackets.
+            Brackets can define single characters, groups, or character spans</td>
+    </tr>
+    <tr>
+        <td>3. [^0-9]</td>
+        <td>The [^0-9] expression is used to find any character that is NOT a digit.
+            The digits inside the brackets can be any numbers or span of numbers from 0 to 9.</td>
+    </tr>
+    <tr>
+        <td>4. (x|y)</td>
+        <td>The (x|y) expression is used to find any of the alternatives specified.
+            The alternatives can be of any characters.</td>
+    </tr>
+    </table>
+
+    </table>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp Metacharacters - The RegExp Metacharacter in JavaScript is used to find the whitespace characters. 
+            <br> The whitespace character can be a space/tab/new line/vertical character.
+        </h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+        <td>1. \w</td>
+        <td>The \w metacharacter matches word characters.
+            A word character is a character a-z, A-Z, 0-9, including _ (underscore). </td>
+    </tr>
+    <tr>
+        <td>2. \D</td>
+        <td>The \D metacharacter matches non-digit characters.</td>
+    </tr>
+    <tr>
+        <td>3. \0</td>
+        <td>The \0 metacharacter maches NUL characters.</td>
+    </tr>
+    <tr>
+        <td>4. \v</td>
+        <td>The \v metacharacter matches vertical tab characters (tabulators).</td>
+    </tr>
+    <tr>
+        <td>5. \udddd</td>
+        <td>The \udddd metacharacters matches Unicode characters specified by a hexadecimal number (dddd).</td>
+    </tr>
+    </table>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp Quantifiers - The RegExp Quantifiers match a number of instances of a character, group, or character class in a string.
+        </h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+		<td>1. *</td>
+		<td>Matches zero or more occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>2. +</td>
+		<td>Matches one or more occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>3. ?</td>
+		<td>Matches zero or one occurrence of the preceding element</td>
+	</tr>
+	<tr>
+		<td>4. {n}</td>
+		<td>Matches exactly n occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>5. {n,}</td>
+		<td>Matches at least n occurrences of the preceding element</td>
+	</tr>
+	<tr>
+		<td>6. {n,m}</td>
+		<td>Matches at least n and at most m occurrences of the preceding element</td>
+	</tr>
+    </table>
+
+    <table style="width:60%"; align="center">
+        <h4>RegExp methods - The RegExp method are used to find matches for regexp in the string str.
+        </h4>
+    <tr>
+        <th>Component</th>
+        <th style="width:60%">Descrpition</th>
+    </tr>
+    <tr>
+		<td>1. test()</td>
+		<td>Tests for a match in a string. Returns true or false.</td> </tr> 
+
+    <tr> 
+        <td>2. exec()</td> 
+        <td>Searches for a match in a string. Returns an array of information about the match or null if no match was found.</td> 
+    </tr> 
+
+    <tr> 
+        <td>3. match()</td> 
+        <td>Searches for a match in a string. Returns an array of information about the match or null if no match was found.</td> 
+    </tr> 
+    <tr> 
+        <td>4. replace()</td> 
+        <td>Replaces a substring in a string with a new substring.</td> 
+    </tr> 
+    <tr> 
+        <td>5. search()</td> 
+        <td>Searches for a match in a string. Returns the index of the match or -1 if no match was found.</td>
+    </tr>
+    </table>
+</body>
+</html>
